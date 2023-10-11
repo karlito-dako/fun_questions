@@ -1,0 +1,28 @@
+# A quick script knocked together in about 10/15 mintues when
+# when asked to show which number in the Fibonacci sequence 
+# is at the specified position.
+
+# Function to calculate the number at the specified (n) position.
+def fibonacci(n):
+    if n <= 0:
+        return "Invalid input"
+    elif n == 1:
+        return 0
+    elif n == 2:
+        return 1
+    else:
+        fib_seq = [0, 1]
+        while len(fib_seq) < n:
+            next_num = fib_seq[-1] + fib_seq[-2]
+            fib_seq.append(next_num)
+        return fib_seq[-1]
+
+# Ask for user input for position.
+n = int(input("Enter position : "))
+result = fibonacci(n)
+
+# Validate the result and let the user know.
+if result != "Invalid input":
+    print(f"Fibonacci sequence number {n} is {result}")
+else:
+    print("Invalid input. Please enter a positive integer.")
