@@ -1,6 +1,6 @@
-# A quick script knocked together in about 10/15 mintues when
-# when asked to show which number in the Fibonacci sequence 
-# is at the specified position.
+# A quick Python script knocked together in about 10/15 minutes
+# when asked to show which number in the Fibonacci sequence is 
+# at the specified position.
 
 # Function to calculate the number at the specified (n) position.
 def fibonacci(n):
@@ -17,7 +17,7 @@ def fibonacci(n):
             fib_seq.append(next_num)
         return fib_seq[-1]
 
-# Ask for user input for position.
+# Ask the user to input a position.
 n = int(input("Enter position : "))
 result = fibonacci(n)
 
